@@ -157,6 +157,20 @@ header p {
     margin: 0 auto;
 }
 
+/* Imagem do produto */
+.product-hero-image {
+    margin-bottom: 2rem;
+    max-width: 100%;
+}
+
+.product-image {
+    max-width: 100%;
+    height: auto;
+    max-height: 500px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
 /* Cards de estatísticas */
 .hero-stats {
     display: grid;
@@ -688,6 +702,35 @@ header p {
     color: var(--secondary);
     margin-bottom: 1rem;
     font-size: 1.2rem;
+}
+
+/* Vídeo responsivo */
+.video-container {
+    margin: 2rem 0;
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.responsive-video {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 */
+    height: 0;
+    overflow: hidden;
+    max-width: 100%;
+    border-radius: 8px;
+    margin-top: 1.5rem;
+}
+
+.responsive-video iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
 }
 
 /* Footer */
