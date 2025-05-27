@@ -1,13 +1,13 @@
 /* Estilos para a página NIVELA - Guia Completo para Distribuidores */
 
 :root {
-    --primary: #B89F8D;
-    --secondary: #5A5A5A;
-    --tertiary: #D9D0C9;
-    --accent: #E8E1DA;
-    --light: #FAF8F5;
-    --dark: #3A3A3A;
-    --success: #7A8C94;
+    --primary: #9D4916; /* CARAMELO/PANTONE 2021C */
+    --secondary: #254C5A; /* AZUL PROFUNDO/PANTONE 7477C */
+    --tertiary: #A6B8C1; /* AZUL NUVEM/PANTONE 2176C */
+    --accent: #D9C0AA; /* CAFÉ COM LEITE */
+    --light: #FAF8F5; /* Variação clara para fundos */
+    --dark: #0D181C; /* PRETO */
+    --success: #3A6B7E; /* Variação do azul profundo para elementos de sucesso */
 }
 
 * {
@@ -31,7 +31,7 @@ body {
 
 /* Header */
 header {
-    background: linear-gradient(135deg, var(--dark), #5A5A5A);
+    background: linear-gradient(135deg, var(--dark), var(--secondary));
     color: white;
     padding: 3rem 0;
     text-align: center;
@@ -110,7 +110,7 @@ header p {
 
 .search-box:focus {
     border-color: var(--primary);
-    box-shadow: 0 0 0 3px rgba(184, 159, 141, 0.1);
+    box-shadow: 0 0 0 3px rgba(157, 73, 22, 0.1);
 }
 
 /* Conteúdo das abas */
@@ -228,7 +228,7 @@ header p {
 
 /* Caixas de alerta */
 .alert-box {
-    background: linear-gradient(135deg, rgba(184, 159, 141, 0.1), rgba(217, 208, 201, 0.3));
+    background: linear-gradient(135deg, rgba(157, 73, 22, 0.1), rgba(217, 192, 170, 0.3));
     border-left: 4px solid var(--primary);
     padding: 2rem;
     border-radius: 10px;
@@ -236,7 +236,7 @@ header p {
 }
 
 .alert-box.secondary {
-    background: linear-gradient(135deg, rgba(90, 90, 90, 0.1), rgba(122, 140, 148, 0.2));
+    background: linear-gradient(135deg, rgba(37, 76, 90, 0.1), rgba(166, 184, 193, 0.2));
     border-left: 4px solid var(--secondary);
 }
 
@@ -253,7 +253,7 @@ header p {
 
 /* Visualização da tecnologia */
 .tech-visual {
-    background: linear-gradient(135deg, rgba(90, 90, 90, 0.1), rgba(217, 208, 201, 0.1));
+    background: linear-gradient(135deg, rgba(37, 76, 90, 0.1), rgba(166, 184, 193, 0.1));
     padding: 3rem;
     border-radius: 10px;
     margin: 3rem 0;
@@ -363,7 +363,7 @@ header p {
 }
 
 .nivela-column {
-    background: rgba(184, 159, 141, 0.1) !important;
+    background: rgba(157, 73, 22, 0.1) !important;
     font-weight: bold;
 }
 
@@ -587,7 +587,7 @@ header p {
 }
 
 .faq-question.active {
-    background: rgba(184, 159, 141, 0.1);
+    background: rgba(157, 73, 22, 0.1);
     color: var(--primary);
 }
 
@@ -624,7 +624,7 @@ header p {
 }
 
 .highlight {
-    background: rgba(184, 159, 141, 0.1);
+    background: rgba(157, 73, 22, 0.1);
     padding: 0.2rem 0.5rem;
     border-radius: 4px;
     font-weight: 600;
