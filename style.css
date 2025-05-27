@@ -1,0 +1,759 @@
+/* Estilos para a página NIVELA - Guia Completo para Distribuidores */
+
+:root {
+    --primary: #9D4916;
+    --secondary: #254C5A;
+    --tertiary: #A6B8C1;
+    --accent: #D9C0AA;
+    --light: #FAF8F5;
+    --dark: #0D181C;
+    --success: #3A6B7E;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: var(--dark);
+    background: var(--light);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header */
+header {
+    background: linear-gradient(135deg, var(--primary), #C9734C);
+    color: white;
+    padding: 3rem 0;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+header h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    font-weight: 800;
+}
+
+header p {
+    font-size: 1.3rem;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Navegação */
+.nav-tabs {
+    background: white;
+    border-bottom: 3px solid var(--tertiary);
+    padding: 0;
+    margin: 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    overflow-x: auto;
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* IE and Edge */
+}
+
+.nav-container::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Opera */
+}
+
+.nav-tab {
+    background: none;
+    border: none;
+    padding: 1rem 1.5rem;
+    cursor: pointer;
+    font-size: 1rem;
+    color: var(--secondary);
+    border-bottom: 3px solid transparent;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+}
+
+.nav-tab.active {
+    color: var(--primary);
+    border-bottom: 3px solid var(--primary);
+    background: var(--light);
+}
+
+.nav-tab:hover {
+    background: var(--light);
+    color: var(--primary);
+}
+
+.search-box {
+    padding: 0.5rem 1rem;
+    border: 2px solid var(--tertiary);
+    border-radius: 25px;
+    font-size: 0.9rem;
+    outline: none;
+    transition: all 0.3s ease;
+    margin-left: 1rem;
+}
+
+.search-box:focus {
+    border-color: var(--primary);
+    box-shadow: 0 0 0 3px rgba(157, 73, 22, 0.1);
+}
+
+/* Conteúdo das abas */
+.tab-content {
+    display: none;
+    padding: 3rem 0;
+    animation: fadeIn 0.5s ease;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Seção Hero */
+.hero-section {
+    background: white;
+    padding: 3rem;
+    text-align: center;
+    border-radius: 10px;
+    margin: 2rem 0;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+}
+
+.hero-section h2 {
+    color: var(--primary);
+    margin-bottom: 1.5rem;
+    font-size: 2rem;
+}
+
+.hero-section p {
+    font-size: 1.2rem;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Cards de estatísticas */
+.hero-stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+    margin: 3rem 0;
+}
+
+.stat-card {
+    background: linear-gradient(135deg, var(--secondary), var(--success));
+    color: white;
+    padding: 2rem;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.stat-card:hover {
+    transform: translateY(-5px);
+}
+
+.stat-number {
+    font-size: 2.5rem;
+    font-weight: 800;
+    margin-bottom: 0.5rem;
+}
+
+/* Grid de recursos */
+.feature-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+.feature-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    border-top: 4px solid var(--primary);
+    transition: transform 0.3s ease;
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+}
+
+.feature-card h4 {
+    color: var(--primary);
+    margin-bottom: 1rem;
+    font-size: 1.3rem;
+}
+
+/* Caixas de alerta */
+.alert-box {
+    background: linear-gradient(135deg, rgba(157, 73, 22, 0.1), rgba(217, 192, 170, 0.3));
+    border-left: 4px solid var(--primary);
+    padding: 2rem;
+    border-radius: 10px;
+    margin: 2rem 0;
+}
+
+.alert-box.secondary {
+    background: linear-gradient(135deg, rgba(37, 76, 90, 0.1), rgba(58, 107, 126, 0.2));
+    border-left: 4px solid var(--secondary);
+}
+
+.alert-title {
+    color: var(--primary);
+    font-weight: bold;
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+.alert-box.secondary .alert-title {
+    color: var(--secondary);
+}
+
+/* Visualização da tecnologia */
+.tech-visual {
+    background: linear-gradient(135deg, rgba(37, 76, 90, 0.1), rgba(166, 184, 193, 0.1));
+    padding: 3rem;
+    border-radius: 10px;
+    margin: 3rem 0;
+    text-align: center;
+}
+
+.tech-layers {
+    display: flex;
+    justify-content: space-around;
+    align-items: stretch;
+    margin: 2rem 0;
+    flex-wrap: wrap;
+}
+
+.layer {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    margin: 1rem;
+    min-width: 200px;
+    border-left: 4px solid var(--primary);
+    flex: 1;
+    min-width: 250px;
+    transition: transform 0.3s ease;
+}
+
+.layer:hover {
+    transform: translateY(-5px);
+}
+
+.layer h4 {
+    color: var(--primary);
+    margin-bottom: 1rem;
+}
+
+/* Tabelas */
+.content-table-container {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    margin: 2rem 0;
+}
+
+.content-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.content-table th {
+    background: var(--secondary);
+    color: white;
+    padding: 1rem;
+    text-align: left;
+}
+
+.content-table td {
+    padding: 1rem;
+    border-bottom: 1px solid #eee;
+}
+
+.content-table tr:nth-child(even) {
+    background: var(--light);
+}
+
+.content-table tr:last-child td {
+    border-bottom: none;
+}
+
+.small-table {
+    min-width: auto;
+}
+
+.table-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+/* Tabela de comparação */
+.comparison-table-container {
+    overflow-x: auto;
+}
+
+.comparison-table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 800px;
+}
+
+.comparison-table th {
+    background: var(--secondary);
+    color: white;
+    padding: 1rem;
+    text-align: center;
+}
+
+.comparison-table td {
+    padding: 1rem;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+}
+
+.comparison-table tr:nth-child(even) {
+    background: var(--light);
+}
+
+.nivela-column {
+    background: rgba(157, 73, 22, 0.1) !important;
+    font-weight: bold;
+}
+
+/* Listas */
+.material-list, .step-list, .problem-solving, .presentation-strategies, .contact-list {
+    list-style: none;
+    margin: 1.5rem 0;
+    padding-left: 1.5rem;
+}
+
+.material-list li, .problem-solving li, .presentation-strategies li, .contact-list li {
+    position: relative;
+    padding-left: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.material-list li:before, .problem-solving li:before, .presentation-strategies li:before, .contact-list li:before {
+    content: "•";
+    color: var(--primary);
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+}
+
+.step-list {
+    counter-reset: step-counter;
+}
+
+.step-list li {
+    position: relative;
+    padding-left: 2rem;
+    margin-bottom: 1rem;
+}
+
+.step-list li:before {
+    content: counter(step-counter);
+    counter-increment: step-counter;
+    color: white;
+    background: var(--primary);
+    border-radius: 50%;
+    width: 1.5rem;
+    height: 1.5rem;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    left: 0;
+    font-size: 0.9rem;
+}
+
+/* Seções de passos */
+.step-section {
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    margin: 2rem 0;
+}
+
+.step-section h4 {
+    color: var(--primary);
+    margin-bottom: 0.5rem;
+}
+
+/* Pós-procedimento */
+.post-procedure {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+.post-procedure div {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+.post-procedure h4 {
+    color: var(--secondary);
+    margin-bottom: 1rem;
+    border-bottom: 2px solid var(--tertiary);
+    padding-bottom: 0.5rem;
+}
+
+.post-procedure ul {
+    list-style: none;
+    padding-left: 1rem;
+}
+
+.post-procedure li {
+    position: relative;
+    padding-left: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.post-procedure li:before {
+    content: "✓";
+    color: var(--success);
+    position: absolute;
+    left: 0;
+    font-weight: bold;
+}
+
+/* Benefícios */
+.benefits-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 3rem;
+    margin: 2rem 0;
+}
+
+.benefit-column h3 {
+    color: var(--secondary);
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+}
+
+.benefit-item {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    border-left: 4px solid var(--success);
+    transition: transform 0.3s ease;
+}
+
+.benefit-item:hover {
+    transform: translateY(-5px);
+}
+
+.benefit-item h4 {
+    color: var(--secondary);
+    margin-bottom: 0.5rem;
+}
+
+/* Rentabilidade */
+.profit-section {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+.profit-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    border-top: 4px solid var(--success);
+}
+
+.profit-card h4 {
+    color: var(--secondary);
+    margin-bottom: 1.5rem;
+    text-align: center;
+    font-size: 1.3rem;
+}
+
+.profit-card p {
+    margin-bottom: 0.8rem;
+}
+
+/* FAQ */
+.faq-container {
+    margin: 2rem 0;
+}
+
+.faq-container h3 {
+    background: var(--secondary);
+    color: white;
+    padding: 1.5rem;
+    margin: 2rem 0 0 0;
+    border-radius: 10px 10px 0 0;
+    font-size: 1.3rem;
+    display: flex;
+    align-items: center;
+}
+
+.category-icon {
+    margin-right: 1rem;
+    font-size: 1.5rem;
+}
+
+.faq-item {
+    background: white;
+    border: 1px solid #ddd;
+    border-top: none;
+}
+
+.faq-item:last-child {
+    border-radius: 0 0 10px 10px;
+}
+
+.faq-question {
+    padding: 1.5rem;
+    cursor: pointer;
+    border: none;
+    background: none;
+    width: 100%;
+    text-align: left;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--dark);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 0.3s ease;
+}
+
+.faq-question:hover {
+    background: var(--light);
+    color: var(--primary);
+}
+
+.faq-question.active {
+    background: rgba(157, 73, 22, 0.1);
+    color: var(--primary);
+}
+
+.faq-toggle {
+    font-size: 1.5rem;
+    transition: transform 0.3s ease;
+}
+
+.faq-question.active .faq-toggle {
+    transform: rotate(45deg);
+}
+
+.faq-answer {
+    display: none;
+    padding: 0 1.5rem 1.5rem;
+    line-height: 1.7;
+    color: var(--dark);
+}
+
+.faq-answer.active {
+    display: block;
+    animation: slideDown 0.3s ease;
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.highlight {
+    background: rgba(157, 73, 22, 0.1);
+    padding: 0.2rem 0.5rem;
+    border-radius: 4px;
+    font-weight: 600;
+    color: var(--primary);
+}
+
+/* Argumentos de venda */
+.arguments-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+.argument-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    border-top: 4px solid var(--primary);
+    transition: transform 0.3s ease;
+}
+
+.argument-card:hover {
+    transform: translateY(-5px);
+}
+
+.argument-card h4 {
+    color: var(--primary);
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+}
+
+.objections-section {
+    margin: 2rem 0;
+}
+
+.objection-item {
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    margin-bottom: 1.5rem;
+    border-left: 4px solid var(--accent);
+}
+
+.objection-item h4 {
+    color: var(--dark);
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+}
+
+/* Suporte */
+.support-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+.support-item {
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    border-top: 4px solid var(--secondary);
+    transition: transform 0.3s ease;
+}
+
+.support-item:hover {
+    transform: translateY(-5px);
+}
+
+.support-item h4 {
+    color: var(--secondary);
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+}
+
+/* Footer */
+footer {
+    background: var(--dark);
+    color: white;
+    padding: 2rem 0;
+    text-align: center;
+    margin-top: 3rem;
+}
+
+footer p {
+    margin-bottom: 0.5rem;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2rem;
+    }
+    
+    .nav-tab {
+        padding: 0.8rem 1rem;
+        font-size: 0.9rem;
+    }
+    
+    .hero-stats {
+        grid-template-columns: 1fr;
+    }
+    
+    .tech-layers {
+        flex-direction: column;
+    }
+    
+    .layer {
+        margin: 1rem 0;
+    }
+    
+    .benefits-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .feature-grid, .benefits-grid, .arguments-grid, .support-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .table-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .profit-section {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-section, .feature-card, .layer, .step-section, .profit-card, .objection-item, .support-item {
+        padding: 1.5rem;
+    }
+    
+    .content-table th, .content-table td, .comparison-table th, .comparison-table td {
+        padding: 0.8rem;
+    }
+    
+    .faq-question {
+        padding: 1rem;
+        font-size: 1rem;
+    }
+}
